@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="">
+        <label for="fname">nitrogen(N)</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="fname">phosphorous(p)</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+
+        <label for="lname">pottasium(k)</label><br>
+        
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label for="crops">Enter the crop</label>
+
+        <select name= crop>
+            {% for crop in crop %}
+            <option value= "{{crop}}" SELECTED>{{crop}}</option>"
+            {% endfor %}
+        </select>
+        
+        <input type="submit" value="Submit">
+      </form>
     
 </body>
 </html>

@@ -2,14 +2,16 @@ from flask import render_template
 from app import app
 
 @app.route("/")
-def hello():
-  return render_template("form.html")
+def mainPage():
+  
+  return render_template("index.html")
 
-@app.route("/<name>")
-def helloname(name):
-    return f"hello {name}"
+@app.route("/form2")
+def helloname():
+  crop = ["rice","wheat"]
+  return render_template("form2.html",crop = crop)
 
 
-@app.route("/admin")
+@app.route("/form")
 def reroute():
-    return "admin"
+    return render_template("form.html")
