@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="fname">nitrogen(N)</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="fname">phosphorous(p)</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+
+        <label for="lname">pottasium(k)</label><br>
+        
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label for="fname">latitude</label><br>
+        <input id = "latitude" type="text" id="fname" name="fname"><br>
+        <label for="fname">longitude</label><br>
+        <input id = "longitude" type="text" id="fname" name="fname"><br>
+        <input type="submit" value="Submit">
+      </form>
+      
+      <script>
+        var latitude  = document.getElementById("latitude");
+        var longitude  = document.getElementById("longitude");
+
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+          } else {
+            div.innerHTML = "The Browser Does not Support Geolocation";
+          }
+        }
+  
+        function showPosition(position) {
+            console.log(position.coords.latitude);
+          //latitude.innerHTML = position.coords.latitude ;
+          //longitude.innerHTML = position.coords.longitude;
+          document.getElementById("latitude").setAttribute("value",position.coords.latitude)
+          document.getElementById("longitude").setAttribute("value",position.coords.longitude)
+
+        }
+  
+        function showError(error) {
+          if(error.PERMISSION_DENIED){
+              div.innerHTML = "The User have denied the request for Geolocation.";
+          }
+        }
+        getLocation();
+      </script>
+
+</body>
+</html>
