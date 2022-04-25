@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    background-color: #174864;
+    font-family: 'Outfit', sans-serif;
+}
+.split {
+    height: 100%;
+    /* width: 50%; */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #8AAC9E;
+  }
+
+  .left {
+    left: 0;
+    background-color: #035F65;
+    width: 30%;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color:#174864 ;
+    width: 70%;
+  }
+
+
+.content h2 {
+    text-align: center;
+    color: #67F5BA;
+    
+}
+
+.content p{
+    text-align: justify;
+    color: #8AAC9E;
+}
+.content{
+    padding: 3em;
+
+}
+
+::placeholder{
+    color: #8AAC9E;
+    font-family: 'Outfit', sans-serif; 
+}
+input{
+    background-color: #035F65;
+    border: none;
+    width: 20em;
+    height: 2.5em;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 1em;
+    font-family: 'Outfit', sans-serif; 
+
+}
+
+
+.button{
+    background-color: #61CC9F;
+    color: #035F65;
+    width: 10em;
+}
+
+.latlong{
+    display: inline !important;
+    width: 20em;
+}

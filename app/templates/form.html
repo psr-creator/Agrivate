@@ -5,23 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="static/form.css">
+    
+
 </head>
 <body>
-    <form action="">
-        <label for="fname">nitrogen(N)</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="fname">phosphorous(p)</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
 
-        <label for="lname">pottasium(k)</label><br>
+  <div class="split left">
+    <div class="content">
+        <h2>Best Crop Prediction</h2>
+      <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available..</p>
+    </div>
+  </div>
+  
+  <div class="split right">
+    <div class="centered">
+      <form action="">
+        <!-- <label for="fname">nitrogen(N)</label><br> -->
+        <input type="text" id="fname" name="fname" value="" placeholder="Nitrogen(N)"><br>
+        <!-- <label for="fname">phosphorous(p)</label><br> -->
+        <input type="text" id="fname" name="fname" value="" placeholder="Phosphorous(P)"><br>
+
+        <!-- <label for="lname">pottasium(k)</label><br> -->
         
-        <input type="text" id="lname" name="lname" value=""><br><br>
-        <label for="fname">latitude</label><br>
-        <input id = "latitude" type="text" id="fname" name="fname"><br>
-        <label for="fname">longitude</label><br>
-        <input id = "longitude" type="text" id="fname" name="fname"><br>
-        <input type="submit" value="Submit">
+        <input type="text" id="lname" name="lname" value="" placeholder="Pottasium(K)"><br><br>
+        <div class="latlong">
+        <label for="fname">latitude & longitude</label><br>
+        <input id = "latitude" type="text" id="fname" name="fname" style="color: #8AAC9E; font-family:'Outfit', sans-serif; "><br>
+        <!-- <label for="fname">longitude</label><br> -->
+        
+        <input id = "longitude" type="text" id="fname" name="fname" style="color: #8AAC9E; font-family:'Outfit', sans-serif; "><br>
+      </div>
+        <input class = "button" type="submit" value="Submit">
       </form>
+    </div>
+  </div>
+   
       
       <script>
         var latitude  = document.getElementById("latitude");
