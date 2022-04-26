@@ -5,28 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="static/form.css">
+
 </head>
 <body>
-
+    <div class="split left">
+        <div class="content">
+            <h2>Best amount of nutrients</h2>
+          <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available..</p>
+        </div>
+      </div>
+      <div class="split right">
+        <div class="centered">
     <form action="">
-        <label for="fname">nitrogen(N)</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="fname">phosphorous(p)</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-
-        <label for="lname">pottasium(k)</label><br>
+        <input type="text" id="fname" name="fname" value="" placeholder="Nitrogen(N)"><br>
+        <!-- <label for="fname">phosphorous(p)</label><br> -->
+        <input type="text" id="fname" name="fname" value="" placeholder="Phosphorous(P)"><br>
+        <input type="text" id="lname" name="lname" value="" placeholder="Pottasium(K)"><br><br>
         
-        <input type="text" id="lname" name="lname" value=""><br><br>
+        
         <label for="crops">Enter the crop</label>
 
-        <select name= crop>
+        <select class = "select" name= crop>
             {% for crop in crop %}
             <option value= "{{crop}}" SELECTED>{{crop}}</option>"
             {% endfor %}
-        </select>
+        </select><br>
         
-        <input type="submit" value="Submit">
+        <input class="button" type="submit" value="Submit">
       </form>
-    
+    </div>
+</div>
 </body>
 </html>

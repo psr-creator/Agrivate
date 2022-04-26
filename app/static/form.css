@@ -79,3 +79,15 @@ input{
     display: inline !important;
     width: 20em;
 }
+
+.select{
+    width: 10em;
+    color: #8AAC9E;
+    background-color: #035F65;
+    padding: 0.35em;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Outfit', sans-serif; 
+    margin-left: 1.5em;
+    
+}
