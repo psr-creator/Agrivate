@@ -43,7 +43,7 @@ $(document).ready(function()
         
         var chart = document.getElementById("myChart").getContext("2d");
           var chart = new Chart(myChart,{
-            type : "bar",
+            type : "line",
 
             data : {
             labels : entry_id_val,
@@ -66,7 +66,7 @@ $(document).ready(function()
               responsive : false,
               legend: {
                 labels: {
-                    // fontColor: '#cf2b5f',
+                    fontColor: '#cf2b5f',
                     fontFamily:"'Montserrat', sans-serif"
 
                     
@@ -74,44 +74,38 @@ $(document).ready(function()
                 }
             },
               scales: {
-                // xAxes: [{
-                //     gridLines: {
-                //         // display:false,
+                xAxes: [{
+                    gridLines: {
+                        display:true,
 
-                //         color: "rgba(0, 0, 0, 0)"
-                //         // color: '#cf2b5f'
+                        // color: "rgba(0, 0, 0, 0)"
+                        // color: '#cf2b5f'
 
-                //     },
-                //     // ticks:{
-                //     //   maxTicksLimit:8,
-                //     //   fontColor : '#A4A8CD',
-                //     //   fontSize: 9,
-                //     //   fontFamily:"'Montserrat', sans-serif"
+                    },
+                    ticks:{
+                      maxTicksLimit:8,
+                      fontColor : '#A4A8CD',
+                      fontSize: 9,
+                      fontFamily:"'Montserrat', sans-serif"
 
-                //     // }
-                // }],
-                // yAxes: [{
-                //     gridLines: {
-                //       color: "rgba(0, 0, 0, 0)"
-                //         // color: '#cf2b5f'
-                //     },
-                //     // ticks:{
-                //     //   maxTicksLimit:8,
-                //     //   fontColor : '#A4A8CD',
-                //     //   fontSize: 9,
-                //     //   fontFamily:"'Montserrat', sans-serif"
-                //     // }   
-                // }]
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                      // color: "rgba(0, 0, 0, 0)"
+                        // color: '#cf2b5f',
+                        display: false,
+
+                    },
+                    ticks:{
+                      maxTicksLimit:8,
+                      fontColor : '#A4A8CD',
+                      fontSize: 9,
+                      fontFamily:"'Montserrat', sans-serif"
+                    }   
+                }]
             }
-              // scales:{
-              //   x:{
-                  
-                
-              //     // min : '22 November',
-              //     // max : '22 November'
-              //   }
-              // }
-
+              
             }
           })
          
