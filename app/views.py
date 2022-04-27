@@ -96,5 +96,8 @@ def predict():
     dataframe=pd.DataFrame(dic,index=[0])
     print("here")
     return(loaded_model.predict(dataframe)[0])
+    #import cropinformations
+    #nameofcrop = loaded_model.predict(dataframe)[0]
+    #description = cropdetails[nameofcrop][desc]   # evidey description of corresponding crop varum
   return render_template("predictcrop.html")
     
