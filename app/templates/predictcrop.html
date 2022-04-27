@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/form.css">
+    
+
+</head>
+<body>
+
+  <div class="split left">
+    <div class="content">
+        <h2>Best Crop Prediction</h2>
+      <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available..</p>
+    </div>
+  </div>
+  
+  <div class="split right">
+    <div class="centered">
+    <form action="/predictcrop" method="POST">
+
+        <!-- <label for="fname">nitrogen(N)</label><br> -->
+        <input type="text" id="fname" name="nitrogen" value="" placeholder="Nitrogen(N)"><br>
+        <!-- <label for="fname">phosphorous(p)</label><br> -->
+        <input type="text" id="fname" name="phosphorous" value="" placeholder="Phosphorous(P)"><br>
+
+        <!-- <label for="lname">pottasium(k)</label><br> -->
+        
+        <input type="text" id="lname" name="pottasium" value="" placeholder="Pottasium(K)"><br><br>
+        <div class="latlong">
+        <label for="fname">latitude & longitude</label><br>
+        <input id = "latitude" type="text" id="fname" name="latitude" style="color: #8AAC9E; font-family:'Outfit', sans-serif; "><br>
+        <!-- <label for="fname">longitude</label><br> -->
+        
+        <input id = "longitude" type="text" id="fname" name="longitude" style="color: #8AAC9E; font-family:'Outfit', sans-serif; "><br>
+      </div>
+        <input class = "button" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+   
+      
+      <script>
+        var latitude  = document.getElementById("latitude");
+        var longitude  = document.getElementById("longitude");
+
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+          } else {
+            div.innerHTML = "The Browser Does not Support Geolocation";
+          }
+        }
+  
+        function showPosition(position) {
+            console.log(position.coords.latitude);
+          //latitude.innerHTML = position.coords.latitude ;
+          //longitude.innerHTML = position.coords.longitude;
+          document.getElementById("latitude").setAttribute("value",position.coords.latitude)
+          document.getElementById("longitude").setAttribute("value",position.coords.longitude)
+
+        }
+  
+        function showError(error) {
+          if(error.PERMISSION_DENIED){
+              div.innerHTML = "The User have denied the request for Geolocation.";
+          }
+        }
+        getLocation();
+      </script>
+
+</body>
+</html>

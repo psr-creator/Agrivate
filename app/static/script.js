@@ -50,7 +50,7 @@ $(document).ready(function()
               
               datasets : [
                 {
-                  label : "Daily Confirmed Cases",
+                  label : "Moisture",
                   data : moisture_val,
                   backgroundColor : "#cf2b5f",
                   borderColor:"#cf2b5f",
@@ -66,7 +66,7 @@ $(document).ready(function()
               responsive : false,
               legend: {
                 labels: {
-                    fontColor: '#cf2b5f',
+                    // fontColor: '#cf2b5f',
                     fontFamily:"'Montserrat', sans-serif"
 
                     
@@ -74,32 +74,34 @@ $(document).ready(function()
                 }
             },
               scales: {
-                xAxes: [{
-                    gridLines: {
-                        display:false,
-                        color: '#cf2b5f'
+                // xAxes: [{
+                //     gridLines: {
+                //         // display:false,
 
-                    },
-                    ticks:{
-                      maxTicksLimit:8,
-                      fontColor : '#A4A8CD',
-                      fontSize: 9,
-                      fontFamily:"'Montserrat', sans-serif"
+                //         color: "rgba(0, 0, 0, 0)"
+                //         // color: '#cf2b5f'
 
-                    }
-                }],
-                yAxes: [{
-                    gridLines: {
-                        display:false,
-                        color: '#cf2b5f'
-                    },
-                    ticks:{
-                      maxTicksLimit:8,
-                      fontColor : '#A4A8CD',
-                      fontSize: 9,
-                      fontFamily:"'Montserrat', sans-serif"
-                    }   
-                }]
+                //     },
+                //     // ticks:{
+                //     //   maxTicksLimit:8,
+                //     //   fontColor : '#A4A8CD',
+                //     //   fontSize: 9,
+                //     //   fontFamily:"'Montserrat', sans-serif"
+
+                //     // }
+                // }],
+                // yAxes: [{
+                //     gridLines: {
+                //       color: "rgba(0, 0, 0, 0)"
+                //         // color: '#cf2b5f'
+                //     },
+                //     // ticks:{
+                //     //   maxTicksLimit:8,
+                //     //   fontColor : '#A4A8CD',
+                //     //   fontSize: 9,
+                //     //   fontFamily:"'Montserrat', sans-serif"
+                //     // }   
+                // }]
             }
               // scales:{
               //   x:{
