@@ -1,9 +1,9 @@
-import re
 from flask import render_template,request
 from app import app
 import joblib
 import pandas as pd
 from app import kgf
+from app import cropdetails
 
 
 
@@ -84,7 +84,7 @@ def predict():
     lat=float(request.form['latitude'])
     long=float(request.form['longitude'])
     print( lat , long)
-    loaded_model=joblib.load("C:/Users/Neeraj Jayaraj/Desktop/Projects/Agrivate/app/modelNPKTH.joblib")
+    loaded_model=joblib.load("C:\\Users\\LENOVO\\Desktop\\final_project\\Agrivate\\app\\modelNPKTH.joblib")
     val=kgf.get_temp_humidity(lat,long)
     humidity=val[0]
     temperature=val[1]-273
@@ -95,6 +95,10 @@ def predict():
       dic[col[i]]=values[i]
     dataframe=pd.DataFrame(dic,index=[0])
     print("here")
-    return(loaded_model.predict(dataframe)[0])
+    description=cropdetails.predict(loaded_model.predict(dataframe)[0])["desc"]
+    crop=loaded_model.predict(dataframe)[0]
+    # return(cropdetails.predict(loaded_model.predict(dataframe)[0])["desc"])
+    return render_template("cropDisplay.html",description = description, crop = crop)
+    #return(loaded_model.predict(dataframe)[0])
   return render_template("predictcrop.html")
     
