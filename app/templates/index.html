@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="static/style.css">
@@ -14,10 +16,11 @@
 <body>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <a href="/">Live Moisture Profile</a>
+    
+    <a href="/predictcrop">Best Crop Prediction </a>
+    <a href="/predictnutrients">Nutrients Prediction</a>
+    
   </div>
   <span style="font-size:25px;cursor:pointer;color:#67F5BA;float:right;margin-right:2em; " onclick="openNav()">&#9776;</span>
     <h1 class="main-heading">Latest Moisture Profile</h1>
@@ -29,22 +32,15 @@
             
         </div>
         <div class="right">
-            <canvas id="myChart"></canvas>
+            <canvas id="myChart" width="400px" height="300px"></canvas>
         </div>
     </div>
+    <p class="des">*The above chart represents the latest moisture value which is retrieved from the hardware device(Moisture sensor)</p>
+
     
 
     <script src="static/script.js"></script>
-    <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-      </script>
-    
+  
 </body>
 
 

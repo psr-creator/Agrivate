@@ -27,13 +27,21 @@ body{
     background-color: rgb(17, 242, 148,0.13);
     height: auto;
     color: #8AAC9E;
+    -webkit-box-shadow: -2px -1px 15px 7px rgba(97,0,0,0.5);
+  -moz-box-shadow: -3px -2px 30px 14px rgba(0,0,0,0.425);
+  box-shadow: -4px -3px 45px 21px rgba(11, 56, 36, 0.35);
+  border-radius: 20px;
 
 }
 .right{
-    padding: 2rem;
+    /* padding: 5rem; */
+    margin: 3em;
 }
 
-
+#mychart{
+    width: 20em;
+    height: 20em;
+}
 
 /* form */
 
@@ -80,3 +88,73 @@ body{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 10px;}
   }
+
+
+
+
+  .desc {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: #8AAC9E;
+    background-color: #035F65;
+    padding: 2em;
+    border-radius: 20px;
+    /* box-shadow: 5px 5px rgb(97, 204, 159,0.43); */
+    -webkit-box-shadow: -2px -1px 15px 7px rgba(97,0,0,0.5);
+  -moz-box-shadow: -3px -2px 30px 14px rgba(0,0,0,0.425);
+  box-shadow: -4px -3px 45px 21px rgba(11, 56, 36, 0.35);
+  }
+
+  .data{
+     text-align: center;
+     margin-top: 3em;
+     color: #67F5BA;
+      /* width: ; */
+      /* padding: 2em; */
+  }
+  .npk h2{
+    text-align: center;
+    /* margin-top: 3em; */
+    color: #67F5BA;
+     /* width: ; */
+     /* padding: 2em; */
+ }
+
+  .npk{
+    text-align: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 3em;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: #8AAC9E;
+    background-color: #035F65;
+    padding: 2em;
+    border-radius: 20px;
+    /* box-shadow: 5px 5px rgb(97, 204, 159,0.43); */
+    -webkit-box-shadow: -2px -1px 15px 7px rgba(97,0,0,0.5);
+  -moz-box-shadow: -3px -2px 30px 14px rgba(0,0,0,0.425);
+  box-shadow: -4px -3px 45px 21px rgba(11, 56, 36, 0.35);
+  }
+
+  .legend{
+      text-align: center;
+      font-size: 0.75em;
+      color: #8AAC9E;
+      margin-left: 25%;
+    margin-right: 25%;
+  }
+  .des{
+    text-align: center;
+    font-size: 0.75em;
+    color: #8AAC9E;
+    /* margin-left: 5rem; */
+    /* margin-right: 5rem; */
+   
+}

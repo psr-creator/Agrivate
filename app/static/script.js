@@ -1,6 +1,12 @@
 
 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 
 $(document).ready(function() 
 {
@@ -43,7 +49,7 @@ $(document).ready(function()
         
         var chart = document.getElementById("myChart").getContext("2d");
           var chart = new Chart(myChart,{
-            type : "line",
+            type : "bar",
 
             data : {
             labels : entry_id_val,
@@ -52,8 +58,8 @@ $(document).ready(function()
                 {
                   label : "Moisture",
                   data : moisture_val,
-                  backgroundColor : "#cf2b5f",
-                  borderColor:"#cf2b5f",
+                  backgroundColor : "#1BF3BF",
+                  borderColor:"#1BF3BF",
                   minBarLength : 100,
                   borderWidth : 3,
                   pointRadius:1,
@@ -66,8 +72,8 @@ $(document).ready(function()
               responsive : false,
               legend: {
                 labels: {
-                    fontColor: '#cf2b5f',
-                    fontFamily:"'Montserrat', sans-serif"
+                    fontColor: '#1BF3BF',
+                    fontFamily:"'Outfit', sans-serif"
 
                     
                     // fontSize: 18
@@ -76,38 +82,40 @@ $(document).ready(function()
               scales: {
                 xAxes: [{
                     gridLines: {
-                        display:true,
+                        display:false,
 
                         // color: "rgba(0, 0, 0, 0)"
-                        // color: '#cf2b5f'
+                        color: '#1BF3BF'
 
                     },
                     ticks:{
                       maxTicksLimit:8,
-                      fontColor : '#A4A8CD',
+                      fontColor : '#1BF3BF',
                       fontSize: 9,
-                      fontFamily:"'Montserrat', sans-serif"
+                      fontFamily:"Outfit, sans-serif"
 
                     }
                 }],
                 yAxes: [{
                     gridLines: {
                       // color: "rgba(0, 0, 0, 0)"
-                        // color: '#cf2b5f',
+                        color: '#1BF3BF',
                         display: false,
 
                     },
                     ticks:{
                       maxTicksLimit:8,
-                      fontColor : '#A4A8CD',
+                      fontColor : '#1BF3BF',
                       fontSize: 9,
-                      fontFamily:"'Montserrat', sans-serif"
+                      fontFamily:"Outfit, sans-serif"
                     }   
                 }]
             }
               
             }
           })
+
+      
          
 
     }

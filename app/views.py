@@ -32,7 +32,7 @@ def reroute():
 
 @app.route("/findcrop/<lat>/<long>/<n>/<p>/<k>")
 def getdata(lat,long,n,p,k):
-  loaded_model=joblib.load("C:\\Users\\LENOVO\\Desktop\\final_project\\Agrivate\\app\\modelNPKTH.joblib")
+  loaded_model=joblib.load("app/modelNPKTH.joblib")
   val=kgf.get_temp_humidity(lat,long)
   humidity=val[0]
   temperature=val[1]-273
@@ -70,8 +70,11 @@ def predictNutrients():
     nret=round(value[0]-int(n),2)
     pret=round(value[1]-int(p),2)
     kret=round(value[2]-int(k),2)
-    return f"{nret} {pret} {kret}"
+    description=cropdetails.predict(crop)["desc"]
+    # return f"{nret} {pret} {kret}"
+    return render_template("npkDisplay.html",nret = nret,pret = pret,kret = kret,crop = crop,description = description)
   else:
+  
     return render_template("predictnutrients.html",crop = crops)
 
 
@@ -84,7 +87,7 @@ def predict():
     lat=float(request.form['latitude'])
     long=float(request.form['longitude'])
     print( lat , long)
-    loaded_model=joblib.load("C:\\Users\\LENOVO\\Desktop\\final_project\\Agrivate\\app\\modelNPKTH.joblib")
+    loaded_model=joblib.load("app/modelNPKTH.joblib")
     val=kgf.get_temp_humidity(lat,long)
     humidity=val[0]
     temperature=val[1]-273
@@ -97,8 +100,12 @@ def predict():
     print("here")
     description=cropdetails.predict(loaded_model.predict(dataframe)[0])["desc"]
     crop=loaded_model.predict(dataframe)[0]
+    path1= "assets/images/" + str(loaded_model.predict(dataframe)[0])+".jpg"
+    path2= "assets/images/" + str(loaded_model.predict(dataframe)[0])+"2"+".jpg"
+    
+    print(path1)
     # return(cropdetails.predict(loaded_model.predict(dataframe)[0])["desc"])
-    return render_template("cropDisplay.html",description = description, crop = crop)
+    return render_template("cropDisplay.html",description = description, crop = crop,path1 = path1,path2 = path2)
     #return(loaded_model.predict(dataframe)[0])
   return render_template("predictcrop.html")
     

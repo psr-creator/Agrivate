@@ -2,6 +2,7 @@ def predict(crop):
     cropdetails={
     "rice":{ 
         "desc":"The cultivated rice plant is an annual grass and grows to about 1.2 metres (4 feet) in height. The leaves are long and flattened and are borne on hollow stems. The fibrous root system is often broad and spreading. The panicle, or inflorescence (flower cluster), is made up of spikelets bearing flowers that produce the fruit, or grain. Varieties differ greatly in the length, shape, and weight of the panicle and the overall productivity of a given plant.",
+         
          },
     "maize":{ 
         "desc":"The corn plant is a tall annual grass with a stout, erect, solid stem. The large narrow leaves have wavy margins and are spaced alternately on opposite sides of the stem. Staminate (male) flowers are borne on the tassel terminating the main axis of the stem. The pistillate (female) inflorescences, which mature to become the edible ears, are spikes with a thickened axis, bearing paired spikelets in longitudinal rows; each row of paired spikelets normally produces two rows of grain. Varieties of yellow and white corn are the most popular as food, though there are varieties with red, blue, pink, and black kernels, often banded, spotted, or striped. Each ear is enclosed by modified leaves called shucks or husks.",

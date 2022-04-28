@@ -5,20 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="static/form.css">
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+
     
 
 </head>
 <body>
+  
 
   <div class="split left">
     <div class="content">
         <h2>Best Crop Prediction</h2>
-      <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available..</p>
+      <p>The best crop which gives the best yield is predicted based on the Nitrogen(N), Phosphorous(P) and Potassium(K) values given. Here temperature is also a factor in determining the best crop so we make use of the current location. </p>
     </div>
   </div>
   
   <div class="split right">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/">Live Moisture Profile</a>
+      
+      <a href="/predictcrop">Best Crop Prediction </a>
+      <a href="/predictnutrients">Nutrients Prediction</a>
+      
+    </div>
+    <span style="font-size:25px;cursor:pointer;color:#67F5BA;float:right;margin-right:2em; " onclick="openNav()">&#9776;</span>
     <div class="centered">
     <form action="/predictcrop" method="POST">
 
@@ -70,6 +84,7 @@
         }
         getLocation();
       </script>
+      <script src="static/script.js"></script>
 
 </body>
 </html>

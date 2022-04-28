@@ -5,17 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="static/form.css">
+    <!-- <link rel="stylesheet" href="static/style.css"> -->
+
 
 </head>
 <body>
+  
+
     <div class="split left">
         <div class="content">
             <h2>Best amount of nutrients</h2>
-          <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available..</p>
+          <p>According to the nutrient(ie the nitrogen, phosphorous and potassium values) value and the crop choosen the lack of nutrients or the excess of nutrient content in the soil is obtained. </p>
         </div>
       </div>
       <div class="split right">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/">Live Moisture Profile</a>
+          
+          <a href="/predictcrop">Best Crop Prediction </a>
+          <a href="/predictnutrients">Nutrients Prediction</a>
+          
+        </div>
+        <span style="font-size:25px;cursor:pointer;color:#67F5BA;float:right;margin-right:2em; " onclick="openNav()">&#9776;</span>
         <div class="centered">
     <form action="/predictnutrients" method="POST">
 
@@ -37,5 +52,7 @@
       </form>
     </div>
 </div>
+<script src="static/script.js"></script>
+
 </body>
 </html>
